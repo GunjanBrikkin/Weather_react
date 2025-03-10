@@ -6,7 +6,8 @@ const ContactCard = (props) => {
   console.log("id is ", id);
   console.log(Name);
   console.log(Email);
-  console.log("props,",props)
+  console.log("props,",props);
+  console.log("props.contact",props.contact)
 
   return (
     <div className="item" key={id}>
@@ -24,6 +25,13 @@ const ContactCard = (props) => {
         style={{ color: "red", marginTop: "7px",  marginLeft:"323px" }}
         // onClick={() => props.clickHandler(id)}
       ></i> 
+       <Link to="/edit" state={{contact:props.contact}}>
+       <i
+        className="edit alternate outline icon"
+        style={{ color: "blue", marginTop: "7px",  marginLeft:"323px" }}
+        // onClick={() => props.clickHandler(id)}
+      ></i> 
+       </Link>
      </Link>
      
     

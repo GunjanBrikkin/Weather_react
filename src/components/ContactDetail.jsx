@@ -5,6 +5,7 @@ import {Link} from "react-router-dom";
 
 const ContactDetail = (props) => {
   const location = useLocation();
+  console.log("location is  ==>",location)
   const { contact } = location.state || {};
   console.log("Contact details:", contact); // Debugging
  const {Name ,  Email} = contact;
